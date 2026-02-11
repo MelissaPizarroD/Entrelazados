@@ -142,10 +142,10 @@ header {
 
 .brand-name {
     color: var(--morado);
-    font-style: italic;
+    font-style: normal;
 }
 
-/* Si usas logo pequeño en el título */
+/* porsiacas logo pequeño en el título */
 .logo-inline {
     height: 50px;
     vertical-align: middle;
@@ -162,7 +162,7 @@ header {
     line-height: 1.8;
     margin-bottom: 40px;
     color: var(--negro);
-    text-align: justify;
+    text-align: center;
 }
 
 .intro-text strong {
@@ -187,6 +187,24 @@ header {
     display: block;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/*Cita del principio*/
+
+blockquote.center {
+    max-width: 700px;
+    margin: 40px auto;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.4rem;
+    color: var(--morado);
+}
+
+cite {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: var(--negro);
 }
 
 /* ========================================

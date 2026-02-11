@@ -1,0 +1,263 @@
+@font-face {
+    font-family: 'GlacialIndifference';
+    src: url('../assets/fonts/GlacialIndifference-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GlacialIndifference';
+    src: url('../assets/fonts/GlacialIndifference-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* ========================================
+   VARIABLES DE COLOR
+   ======================================== */
+:root {
+    --rojo: #DF372D;
+    --naranja: #F1793B;
+    --amarillo: #FB9C2A;
+    --rosado: #DF5362;
+    --morado: #7E2D61;
+    --blanco: #FFFFFF;
+    --negro: #1a1a1a;
+    --gris-claro: #f5f5f5;
+}
+
+/* ========================================
+   ESTILOS GLOBALES
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-family: 'GlacialIndifference', Arial, sans-serif;
+    background-color: var(--blanco);
+    color: var(--negro);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========================================
+   HEADER - LOGO Y SLOGAN
+   ======================================== */
+header {
+    background-color: var(--blanco);
+    padding: 30px 0 0 0;
+    border-bottom: 3px solid var(--rojo);
+}
+
+.header-content {
+    text-align: center;
+    padding: 0 20px 20px 20px;
+}
+
+.logo {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.slogan {
+    font-size: 1.1rem;
+    color: var(--morado);
+    font-style: normal;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* ========================================
+   NAVEGACIÓN
+   ======================================== */
+.main-nav {
+    background: linear-gradient(90deg, 
+        var(--rojo) 0%, 
+        var(--naranja) 25%, 
+        var(--amarillo) 50%, 
+        var(--rosado) 75%, 
+        var(--morado) 100%);
+    padding: 0;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav li {
+    margin: 0;
+}
+
+.main-nav a {
+    display: block;
+    padding: 18px 25px;
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   SECCIÓN HISTORIA
+   ======================================== */
+.historia {
+    padding: 80px 20px;
+    min-height: calc(100vh - 300px);
+}
+
+.historia h1 {
+    font-size: 3rem;
+    color: var(--rojo);
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.brand-name {
+    color: var(--morado);
+    font-style: italic;
+}
+
+/* Si usas logo pequeño en el título */
+.logo-inline {
+    height: 50px;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+
+.historia-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.intro-text {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    color: var(--negro);
+    text-align: justify;
+}
+
+.intro-text strong {
+    color: var(--rojo);
+    font-weight: 700;
+}
+
+.main-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: var(--negro);
+    text-align: justify;
+}
+
+/* Imagen opcional en la historia */
+.historia-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 40px auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+footer {
+    background-color: var(--morado);
+    color: var(--blanco);
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 80px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 768px) {
+    .logo {
+        max-width: 280px;
+    }
+    
+    .slogan {
+        font-size: 0.95rem;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+    }
+    
+    .main-nav a {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .historia {
+        padding: 50px 15px;
+    }
+    
+    .historia h1 {
+        font-size: 2rem;
+    }
+    
+    .intro-text {
+        font-size: 1.1rem;
+        text-align: left;
+    }
+    
+    .main-text {
+        font-size: 1rem;
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        max-width: 220px;
+    }
+    
+    .historia h1 {
+        font-size: 1.6rem;
+    }
+    
+    .main-nav a {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+}

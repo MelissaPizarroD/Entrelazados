@@ -107,23 +107,32 @@ header {
 }
 
 .main-nav a {
+    position: relative;
     display: block;
     padding: 18px 25px;
     color: var(--blanco);
     text-decoration: none;
     font-weight: 600;
-    font-size: 1rem;
-    transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
-.main-nav a:hover,
-.main-nav a.active {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px);
+.main-nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 8px;
+    width: 0;
+    height: 2px;
+    background: var(--blanco);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
 }
 
+.main-nav a:hover::after,
+.main-nav a.active::after {
+    width: 60%;
+}
 /* ========================================
    SECCIÓN HISTORIA
    ======================================== */

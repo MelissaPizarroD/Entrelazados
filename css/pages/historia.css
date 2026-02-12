@@ -1,0 +1,68 @@
+.historia {
+    padding: 80px 20px;
+    min-height: calc(100vh - 300px);
+}
+
+.historia h1 {
+    font-size: 3rem;
+    color: var(--rojo);
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.brand-name {
+    color: var(--morado);
+}
+
+.historia-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.intro-text {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    color: var(--negro);
+    text-align: center;
+}
+
+.intro-text strong {
+    color: var(--rojo);
+    font-weight: 700;
+}
+
+.main-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: var(--negro);
+    text-align: justify;
+}
+
+.historia-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 40px auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+blockquote.center {
+    max-width: 700px;
+    margin: 40px auto;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.4rem;
+    color: var(--morado);
+}
+
+cite {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: var(--negro);
+}

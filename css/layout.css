@@ -1,0 +1,95 @@
+/* HEADER */
+header {
+    background-color: var(--blanco);
+    padding: 30px 0 0 0;
+    border-bottom: 3px solid var(--rojo);
+}
+
+.header-content {
+    text-align: center;
+    padding: 0 20px 20px 20px;
+}
+
+.logo {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.slogan {
+    font-size: 1.1rem;
+    color: var(--morado);
+    font-style: normal;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* NAVEGACIÓN */
+.main-nav {
+    background: linear-gradient(90deg, 
+        var(--rojo) 0%, 
+        var(--naranja) 25%, 
+        var(--amarillo) 50%, 
+        var(--rosado) 75%, 
+        var(--morado) 100%);
+    padding: 0;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav li {
+    margin: 0;
+}
+
+.main-nav a {
+    position: relative;
+    display: block;
+    padding: 18px 25px;
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.main-nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 8px;
+    width: 0;
+    height: 2px;
+    background: var(--blanco);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+    width: 60%;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--morado);
+    color: var(--blanco);
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 80px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.95rem;
+}

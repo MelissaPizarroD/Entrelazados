@@ -6,6 +6,7 @@
     <title>Ronda - Entrelazados</title>
     <link rel="icon" type="image/png" href="assets/images/entrelazados-logo-icon.png">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/slider-styles.css">
 </head>
 <body>
     <header>
@@ -30,51 +31,71 @@
             <div class="prenda-content">
                 <h1><span style="color: var(--rosado)">Ronda</span></h1>
 
-                <!-- Aquí va la foto de los renders con la Modelo -->
                 <img src="assets/images/prenda3-render-modelo.png" alt="Render Modelo Ronda" class="render-principal">
 
                 <p class="descripcion-prenda">
                     <strong>Ronda</strong>, inspirado en el Sombrero Vueltiao, reinterpreta la lógica circular y estructural del sombrero tradicional colombiano, incorporando un patrón geométrico compuesto por estrellas y líneas en zigzag, evocando el ritmo del tejido manual.
                 </p>
 
-                <!-- Aquí va la foto del patrón -->
                 <img src="assets/images/prenda3-patron.png" alt="Patrón Ronda" class="imagen-patron">
 
                 <p class="texto-intermedio">
                     La pieza se transforma mediante un sistema de cremalleras y tiras desmontables, permitiendo cuatro configuraciones: sombrero, bolso amplio con tiras largas, bolso amplio de mano y bolso pequeño de tiras largas.
                 </p>
 
-                <!-- Aquí van las 4 fotos de las configuraciones -->
-                <div class="configuraciones-grid">
-                    <div class="configuracion-item">
-                        <div class="config-header">
-                            <p class="config-numero"><span style="color: var(--rosado);">Configuración No. 1</span></p>
-                            <p class="config-nombre">Sombrero</p>
+                <!-- Instrucciones del slider -->
+                <p class="slider-instructions">
+                    Usa las <span style="color: var(--rosado);">flechas</span> para explorar las diferentes configuraciones
+                </p>
+
+                <!-- Contenedor del slider -->
+                <div class="slider-container">
+                    <button class="slider-btn prev" aria-label="Configuración anterior">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg>
+                    </button>
+
+                    <!-- Grid de configuraciones -->
+                    <div class="configuraciones-grid">
+                        <div class="configuracion-item">
+                            <div class="config-header">
+                                <p class="config-numero"><span style="color: var(--rosado);">Configuración No. 1</span></p>
+                                <p class="config-nombre">Sombrero</p>
+                            </div>
+                            <img src="assets/images/prenda3-config1-sombrero.png" alt="Configuración Sombrero">
                         </div>
-                        <img src="assets/images/prenda3-config1-sombrero.png" alt="Configuración Sombrero">
-                    </div>
-                    <div class="configuracion-item">
-                        <div class="config-header">
-                            <p class="config-numero"><span style="color: var(--rosado);">Configuración No. 2</span></p>
-                            <p class="config-nombre">Bolso amplio con tiras largas</p>
+                        <div class="configuracion-item">
+                            <div class="config-header">
+                                <p class="config-numero"><span style="color: var(--rosado);">Configuración No. 2</span></p>
+                                <p class="config-nombre">Bolso amplio con tiras largas</p>
+                            </div>
+                            <img src="assets/images/prenda3-config2-bolso-amplio-tiras.png" alt="Configuración Bolso amplio con tiras largas">
                         </div>
-                        <img src="assets/images/prenda3-config2-bolso-amplio-tiras.png" alt="Configuración Bolso amplio con tiras largas">
-                    </div>
-                    <div class="configuracion-item">
-                        <div class="config-header">
-                            <p class="config-numero"><span style="color: var(--rosado);">Configuración No. 3</span></p>
-                            <p class="config-nombre">Bolso amplio de mano</p>
+                        <div class="configuracion-item">
+                            <div class="config-header">
+                                <p class="config-numero"><span style="color: var(--rosado);">Configuración No. 3</span></p>
+                                <p class="config-nombre">Bolso amplio de mano</p>
+                            </div>
+                            <img src="assets/images/prenda3-config3-bolso-amplio-mano.png" alt="Configuración Bolso amplio de mano">
                         </div>
-                        <img src="assets/images/prenda3-config3-bolso-amplio-mano.png" alt="Configuración Bolso amplio de mano">
-                    </div>
-                    <div class="configuracion-item">
-                        <div class="config-header">
-                            <p class="config-numero"><span style="color: var(--rosado);">Configuración No. 4</span></p>
-                            <p class="config-nombre">Bolso pequeño de tiras largas</p>
+                        <div class="configuracion-item">
+                            <div class="config-header">
+                                <p class="config-numero"><span style="color: var(--rosado);">Configuración No. 4</span></p>
+                                <p class="config-nombre">Bolso pequeño de tiras largas</p>
+                            </div>
+                            <img src="assets/images/prenda3-config4-bolso-pequeno-tiras.png" alt="Configuración Bolso pequeño de tiras largas">
                         </div>
-                        <img src="assets/images/prenda3-config4-bolso-pequeno-tiras.png" alt="Configuración Bolso pequeño de tiras largas">
                     </div>
+
+                    <button class="slider-btn next" aria-label="Siguiente configuración">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                        </svg>
+                    </button>
                 </div>
+
+                <div class="slider-indicator">1 / 4</div>
             </div>
         </section>
     </main>
@@ -82,5 +103,7 @@
     <footer>
         <p>&copy; 2025 Entrelazados. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="js/slider-configuraciones.js"></script>
 </body>
 </html>

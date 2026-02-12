@@ -6,6 +6,7 @@
     <title>Cruce - Entrelazados</title>
     <link rel="icon" type="image/png" href="assets/images/entrelazados-logo-icon.png">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/slider-styles.css">
 </head>
 <body>
     <header>
@@ -17,9 +18,9 @@
         <nav class="main-nav">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="prenda1.html" class="active">Prenda 1</a></li>
-                <li><a href="prenda2.html">Prenda 2</a></li>
-                <li><a href="prenda3.html">Prenda 3</a></li>
+                <li><a href="prenda1.html" class="active">Cruce</a></li>
+                <li><a href="prenda2.html">Versa</a></li>
+                <li><a href="prenda3.html">Ronda</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
@@ -42,34 +43,62 @@
                     La prenda cuenta con un sistema de cremalleras y un fondo agregado, lo que permite transformarla en cuatro configuraciones: bufanda, poncho, blusa y bolso tipo tsuno bag.
                 </p>
 
-                <div class="configuraciones-grid">
-                    <div class="configuracion-item">
-                        <div class="config-header">
-                            <p class="config-numero"><span style="color: var(--naranja);">Configuración No. 1</span></p>
-                            <p class="config-nombre">Bufanda</p>
+                <!-- Instrucciones del slider -->
+                <p class="slider-instructions">
+                    Usa las <span style="color: var(--naranja);">flechas</span> para explorar las diferentes configuraciones
+                </p>
+
+                <!-- Contenedor del slider -->
+                <div class="slider-container">
+                    <!-- Botón anterior -->
+                    <button class="slider-btn prev" aria-label="Configuración anterior">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg>
+                    </button>
+
+                    <!-- Grid de configuraciones -->
+                    <div class="configuraciones-grid">
+                        <div class="configuracion-item">
+                            <div class="config-header">
+                                <p class="config-numero"><span style="color: var(--naranja);">Configuración No. 1</span></p>
+                                <p class="config-nombre">Bufanda</p>
+                            </div>
+                            <img src="assets/images/prenda1-config1-bufanda.png" alt="Configuración Bufanda">
                         </div>
-                        <img src="assets/images/prenda1-config1-bufanda.png" alt="Configuración Bufanda">
+                        <div class="configuracion-item">
+                            <div class="config-header">
+                                <p class="config-numero"><span style="color: var(--naranja);">Configuración No. 2</span></p>
+                                <p class="config-nombre">Poncho</p>
+                            </div>                        
+                            <img src="assets/images/prenda1-config2-poncho.png" alt="Configuración Poncho">
+                        </div>
+                        <div class="configuracion-item">
+                            <div class="config-header">
+                                <p class="config-numero"><span style="color: var(--naranja);">Configuración No. 3</span></p>
+                                <p class="config-nombre">Blusa</p>
+                            </div>
+                            <img src="assets/images/prenda1-config3-blusa.png" alt="Configuración Blusa">
+                        </div>
+                        <div class="configuracion-item">
+                            <div class="config-header">
+                                <p class="config-numero"><span style="color: var(--naranja);">Configuración No. 4</span></p>
+                                <p class="config-nombre">Bolso</p>
+                            </div>
+                            <img src="assets/images/prenda1-config4-bolso.png" alt="Configuración Bolso">
+                        </div>
                     </div>
-                    <div class="configuracion-item">
-                        <div class="config-header">
-                            <p class="config-numero"><span style="color: var(--naranja);">Configuración No. 2</span></p>
-                            <p class="config-nombre">Poncho</p>
-                        </div>                        
-                        <img src="assets/images/prenda1-config2-poncho.png" alt="Configuración Poncho">
-                    </div>
-                    <div class="configuracion-item">
-                        <div class="config-header">
-                            <p class="config-numero"><span style="color: var(--naranja);">Configuración No. 3</span></p>
-                            <p class="config-nombre">Blusa</p>
-                        </div>                          <img src="assets/images/prenda1-config3-blusa.png" alt="Configuración Blusa">
-                    </div>
-                    <div class="configuracion-item">
-                        <div class="config-header">
-                            <p class="config-numero"><span style="color: var(--naranja);">Configuración No. 4</span></p>
-                            <p class="config-nombre">Bolso</p>
-                        </div>                          <img src="assets/images/prenda1-config4-bolso.png" alt="Configuración Bolso">
-                    </div>
+
+                    <!-- Botón siguiente -->
+                    <button class="slider-btn next" aria-label="Siguiente configuración">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                        </svg>
+                    </button>
                 </div>
+
+                <!-- Indicador de posición -->
+                <div class="slider-indicator">1 / 4</div>
             </div>
         </section>
     </main>
@@ -77,5 +106,7 @@
     <footer>
         <p>&copy; 2025 Entrelazados. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="js/slider-configuraciones.js"></script>
 </body>
 </html>

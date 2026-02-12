@@ -1,8 +1,8 @@
 /* HEADER */
+
 header {
     background-color: var(--blanco);
     padding: 30px 0 0 0;
-    border-bottom: 3px solid var(--rojo);
 }
 
 .header-content {
@@ -28,13 +28,8 @@ header {
 
 /* NAVEGACIÓN */
 .main-nav {
-    background: linear-gradient(90deg, 
-        var(--rojo) 0%, 
-        var(--naranja) 25%, 
-        var(--amarillo) 50%, 
-        var(--rosado) 75%, 
-        var(--morado) 100%);
-    padding: 0;
+    background-color: var(--blanco);
+    padding: 15px 0;
 }
 
 .main-nav ul {
@@ -45,22 +40,51 @@ header {
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
+    gap: 10px; 
 }
 
 .main-nav li {
     margin: 0;
+    flex: 0 0 auto;
 }
 
 .main-nav a {
     position: relative;
     display: block;
-    padding: 18px 25px;
+    padding: 18px 30px;
     color: var(--blanco);
     text-decoration: none;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     transition: all 0.3s ease;
+    min-width: 150px;
+    text-align: center; 
+}
+
+.main-nav li:nth-child(1) a {
+    background-color: var(--rojo);
+}
+
+.main-nav li:nth-child(2) a {
+    background-color: var(--naranja);
+}
+
+.main-nav li:nth-child(3) a {
+    background-color: var(--amarillo);
+}
+
+.main-nav li:nth-child(4) a {
+    background-color: var(--rosado);
+}
+
+.main-nav li:nth-child(5) a {
+    background-color: var(--morado);
+}
+
+.main-nav a:hover {
+    filter: brightness(0.85);
+    transform: translateY(-2px);
 }
 
 .main-nav a::after {
@@ -82,7 +106,12 @@ header {
 
 /* FOOTER */
 footer {
-    background-color: var(--morado);
+    background: linear-gradient(90deg, 
+        var(--rojo) 0%, 
+        var(--naranja) 25%, 
+        var(--amarillo) 50%, 
+        var(--rosado) 75%, 
+        var(--morado) 100%);
     color: var(--blanco);
     text-align: center;
     padding: 30px 20px;

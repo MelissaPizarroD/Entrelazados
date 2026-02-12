@@ -43,12 +43,10 @@
 
 .historia-image {
     width: 100%;
-    max-width: 800px;
     height: auto;
     margin: 40px auto;
     display: block;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 blockquote.center {

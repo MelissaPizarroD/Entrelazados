@@ -34,6 +34,7 @@
     box-sizing: border-box;
     max-width: 500px;
     margin: 0 auto;
+    transition: opacity 0.3s ease;
 }
 
 /* Botones de navegación */
@@ -53,20 +54,13 @@
     transition: all 0.3s ease;
     z-index: 10;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.slider-btn:hover:not(:disabled) {
-    background-color: var(--negro);
-    transform: translateY(-45%) scale(1.0);
-}
-
-.slider-btn:hover:not(:disabled) svg {
-    fill: var(--blanco);
+    -webkit-tap-highlight-color: transparent; /* Elimina el highlight azul en iOS/Safari */
 }
 
 .slider-btn:disabled {
     opacity: 0.3;
     cursor: not-allowed;
+    pointer-events: none;
 }
 
 .slider-btn.prev {
@@ -77,12 +71,26 @@
     right: 0;
 }
 
+/* ESTADOS PARA MOUSE (SOLO DISPOSITIVOS CON HOVER) */
+@media (hover: hover) {
+    .slider-btn:hover:not(:disabled) {
+        background-color: var(--negro);
+        transform: translateY(-45%) scale(1.0);
+    }
+    
+    .slider-btn:hover:not(:disabled) svg {
+        fill: var(--blanco);
+    }
+}
+
+/* ESTADOS PARA TÁCTIL Y MOUSE (FEEDBACK INMEDIATO) */
 .slider-btn:active {
-    background-color: var(--blanco);
+    background-color: var(--negro) !important;
+    transform: translateY(-45%) scale(0.95) !important;
 }
 
 .slider-btn:active svg {
-    fill: var(--negro);
+    fill: var(--blanco) !important;
 }
 
 .slider-btn svg {
@@ -99,11 +107,6 @@
     font-size: 0.95rem;
     font-weight: 600;
     color: var(--negro);
-}
-
-/* Animación de hover en las configuraciones */
-.configuracion-item {
-    transition: opacity 0.3s ease;
 }
 
 /* RESPONSIVE */
@@ -146,16 +149,5 @@
     
     .slider-instructions {
         font-size: 0.85rem;
-    }
-}
-
-@media (hover: none) {
-    .slider-btn:hover:not(:disabled) {
-        background-color: var(--blanco);
-        transform: translateY(-50%) scale(1);
-    }
-    
-    .slider-btn:hover:not(:disabled) svg {
-        fill: var(--negro);
     }
 }

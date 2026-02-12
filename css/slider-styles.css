@@ -77,6 +77,14 @@
     right: 0;
 }
 
+.slider-btn:active {
+    background-color: var(--blanco);
+}
+
+.slider-btn:active svg {
+    fill: var(--negro);
+}
+
 .slider-btn svg {
     width: 20px;
     height: 20px;
@@ -138,5 +146,16 @@
     
     .slider-instructions {
         font-size: 0.85rem;
+    }
+}
+
+@media (hover: none) {
+    .slider-btn:hover:not(:disabled) {
+        background-color: var(--blanco);
+        transform: translateY(-50%) scale(1);
+    }
+    
+    .slider-btn:hover:not(:disabled) svg {
+        fill: var(--negro);
     }
 }

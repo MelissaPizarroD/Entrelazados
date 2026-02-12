@@ -1,3 +1,4 @@
+/* CUADRADOS DECORATIVOS */
 .decorative-squares {
     position: relative;
     overflow: hidden;
@@ -12,35 +13,25 @@
     height: 100%;
     z-index: -1;
     background-image: 
-        /* Fila superior */
-        linear-gradient(var(--naranja), var(--naranja)),
-        linear-gradient(var(--rosado), var(--rosado)),
-        linear-gradient(var(--rojo), var(--rojo)),
-        /* Fila media */
-        linear-gradient(var(--amarillo), var(--amarillo)),
-        linear-gradient(var(--morado), var(--morado)),
-        /* Fila inferior */
-        linear-gradient(var(--naranja), var(--naranja)),
-        linear-gradient(var(--rosado), var(--rosado)),
-        linear-gradient(var(--amarillo), var(--amarillo));
-    background-size: 
-        180px 180px,
-        120px 120px,
-        90px 90px,
-        150px 150px,
-        100px 100px,
-        110px 110px,
-        140px 140px,
-        130px 130px;
-    background-position: 
-        -70px 40px,
-        25% 15px,
-        calc(100% + 20px) 80px,
-        5% 50%,
-        calc(100% - 60px) 45%,
-        10% calc(100% - 90px),
-        60% calc(100% - 50px),
-        calc(100% + 40px) calc(100% - 60px);
-    background-repeat: no-repeat;
-    opacity: 0.28;
+        radial-gradient(circle at 10% 20%, var(--naranja) 0%, transparent 15%),
+        radial-gradient(circle at 90% 15%, var(--rosado) 0%, transparent 12%),
+        radial-gradient(circle at 15% 80%, var(--amarillo) 0%, transparent 10%),
+        radial-gradient(circle at 85% 75%, var(--morado) 0%, transparent 13%),
+        radial-gradient(circle at 50% 50%, var(--rojo) 0%, transparent 8%);
+    opacity: 0.12;
+}
+
+/* Variante con más cuadrados */
+.decorative-squares-dense::before {
+    background-image: 
+        radial-gradient(circle at 5% 10%, var(--naranja) 0%, transparent 8%),
+        radial-gradient(circle at 25% 5%, var(--rosado) 0%, transparent 6%),
+        radial-gradient(circle at 95% 8%, var(--amarillo) 0%, transparent 7%),
+        radial-gradient(circle at 75% 18%, var(--morado) 0%, transparent 9%),
+        radial-gradient(circle at 8% 85%, var(--rojo) 0%, transparent 10%),
+        radial-gradient(circle at 30% 92%, var(--naranja) 0%, transparent 7%),
+        radial-gradient(circle at 92% 88%, var(--rosado) 0%, transparent 8%),
+        radial-gradient(circle at 70% 78%, var(--amarillo) 0%, transparent 6%),
+        radial-gradient(circle at 50% 50%, var(--morado) 0%, transparent 5%);
+    opacity: 0.08;
 }

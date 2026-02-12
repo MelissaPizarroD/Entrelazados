@@ -20,7 +20,7 @@ header {
 .slogan {
     font-size: 1.1rem;
     color: var(--negro);
-    font-style: normal;
+    font-style: italic;
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.5;

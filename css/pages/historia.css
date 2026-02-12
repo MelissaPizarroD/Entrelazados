@@ -55,7 +55,7 @@ blockquote.center {
     text-align: center;
     font-style: italic;
     font-size: 1.4rem;
-    color: var(--morado);
+    color: var(--negro);
 }
 
 cite {

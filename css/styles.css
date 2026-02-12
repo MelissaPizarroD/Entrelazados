@@ -2,6 +2,8 @@
 @import url('base.css');
 @import url('layout.css');
 @import url('pages/historia.css');
+@import url('pages/prenda.css');
+
 
 /* RESPONSIVE DESIGN GLOBAL */
 @media (max-width: 768px) {

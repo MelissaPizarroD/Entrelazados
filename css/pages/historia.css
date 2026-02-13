@@ -5,14 +5,22 @@
 
 .historia h1 {
     font-size: 3rem;
-    color: var(--rojo);
     text-align: center;
     margin-bottom: 50px;
     font-weight: 700;
 }
 
 .brand-name {
-    color: var(--morado);
+    background: linear-gradient(90deg, 
+        var(--rojo) 0%, 
+        var(--naranja) 25%, 
+        var(--amarillo) 50%, 
+        var(--rosado) 75%, 
+        var(--morado) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
 }
 
 .historia-content {

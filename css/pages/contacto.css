@@ -1,0 +1,190 @@
+/* PÁGINA DE CONTACTO */
+
+.contacto {
+    padding: 80px 20px;
+    min-height: 70vh;
+}
+
+.contacto h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--negro);
+    font-weight: bold;
+}
+
+.contacto .brand-name {
+    background: linear-gradient(90deg, 
+        var(--rojo) 0%, 
+        var(--naranja) 25%, 
+        var(--amarillo) 50%, 
+        var(--rosado) 75%, 
+        var(--morado) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
+}
+
+.contacto-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contacto .intro-text {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 60px;
+    color: var(--negro);
+    line-height: 1.8;
+}
+
+/* INFORMACIÓN DE CONTACTO - CENTRADA */
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 60px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    color: var(--morado);
+    margin-bottom: 5px;
+}
+
+.contact-item:nth-child(1) .contact-icon {
+    color: var(--rojo);
+}
+
+.contact-item:nth-child(2) .contact-icon {
+    color: var(--naranja);
+}
+
+.contact-item:nth-child(3) .contact-icon {
+    color: var(--amarillo);
+}
+
+.contact-item:nth-child(4) .contact-icon {
+    color: var(--rosado);
+}
+
+.contact-label {
+    font-size: 1rem;
+    color: var(--negro);
+    font-weight: bold;
+    margin: 0;
+}
+
+.contact-link {
+    color: var(--morado);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    color: var(--rojo);
+    text-decoration: underline;
+}
+
+.contact-text {
+    color: var(--negro);
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* CITA FINAL */
+
+.contact-quote {
+    margin-top: 60px;
+    padding: 0;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--negro);
+    text-align: center;
+    line-height: 1.6;
+    border: none;
+    background: none;
+}
+
+.contact-quote.center {
+    font-weight: normal;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+    .contacto {
+        padding: 50px 15px;
+    }
+
+    .contacto h1 {
+        font-size: 2rem;
+    }
+
+    .contacto .intro-text {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .contact-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .contact-label {
+        font-size: 0.95rem;
+    }
+
+    .contact-link,
+    .contact-text {
+        font-size: 1rem;
+    }
+
+    .contact-quote {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contacto h1 {
+        font-size: 1.6rem;
+    }
+
+    .contacto .intro-text {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .contact-label {
+        font-size: 0.9rem;
+    }
+
+    .contact-link,
+    .contact-text {
+        font-size: 0.95rem;
+    }
+
+    .contact-quote {
+        font-size: 1rem;
+    }
+}
